@@ -1,4 +1,4 @@
-import { FoldingRangeParams, FoldingRange, TextDocuments } from 'vscode-languageserver';
+import { FoldingRangeParams, FoldingRange, TextDocuments } from 'vscode-languageserver/node';
 import { TextDocument } from 'vscode-languageserver-textdocument';
 import * as path from 'path';
 import * as util from '../util';

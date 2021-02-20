@@ -14,3 +14,4 @@ server/**
 !server/out/luserver.js
 !server/out/qnaserver.js
 scripts/**
+resources/images/**

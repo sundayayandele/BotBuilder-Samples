@@ -5,7 +5,7 @@
 
 import {
 	Diagnostic, Connection, DiagnosticSeverity
-} from 'vscode-languageserver';
+} from 'vscode-languageserver/node';
 
 import { TextDocument } from 'vscode-languageserver-textdocument';
 import * as path from 'path';

@@ -13,19 +13,17 @@
 import {
 	createConnection,
 	TextDocuments,
-	ProposedFeatures,
 	InitializeParams,
 	DidChangeConfigurationNotification,
 	TextDocumentPositionParams,
 	TextDocumentSyncKind,
 	InitializeResult,
-	Files,
 	WorkspaceFolder,
 	DidChangeWatchedFilesNotification,
 	DidChangeWatchedFilesRegistrationOptions,
 	ExecuteCommandParams,
 	FoldingRangeParams
-} from 'vscode-languageserver';
+} from 'vscode-languageserver/node';
 
 import { QnaFilesStatus } from './qnaFilesStatus';
 import { TextDocument } from 'vscode-languageserver-textdocument';
@@ -34,10 +32,11 @@ import * as diagnostics from './providers/diagnostics';
 import * as keyBinding from './providers/keyBinding';
 import * as foldingRange from './providers/foldingRange';
 import * as util from './util';
+import { URI } from 'vscode-uri';
 
 // Create a connection for the server, using Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
-const connection = createConnection(ProposedFeatures.all);
+const connection = createConnection();
 
 // Create a simple text document manager. 
 const documents: TextDocuments<TextDocument> = new TextDocuments(TextDocument);
@@ -167,7 +166,7 @@ connection.onFoldingRanges((params: FoldingRangeParams) => {
 })
 
 documents.onDidOpen(e => {
-	const filePath = Files.uriToFilePath(e.document.uri)!;
+    const filePath = URI.parse(e.document.uri).fsPath;
 	if(!QnaFilesStatus.qnaFilesOfWorkspace.includes(filePath)) {
 		QnaFilesStatus.qnaFilesOfWorkspace.push(filePath);
 	}
