@@ -13,7 +13,7 @@ import {
 	LanguageClientOptions,
 	ServerOptions,
 	TransportKind
-} from 'vscode-languageclient';
+} from 'vscode-languageclient/node';
 
 let lgClient: LanguageClient;
 let luClient: LanguageClient;
