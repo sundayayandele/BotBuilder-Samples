@@ -19,13 +19,12 @@ import {
 	TextDocumentPositionParams,
 	TextDocumentSyncKind,
 	InitializeResult,
-	Files,
 	WorkspaceFolder,
 	DidChangeWatchedFilesNotification,
 	DidChangeWatchedFilesRegistrationOptions,
 	ExecuteCommandParams,
 	FoldingRangeParams
-} from 'vscode-languageserver';
+} from 'vscode-languageserver/node';
 
 import * as completion from './providers/completion';
 import * as diagnostics from './providers/diagnostics';
@@ -35,6 +34,7 @@ import * as foldingRange from './providers/foldingRange';
 import * as util from './util';
 import { LuFilesStatus } from './luFilesStatus';
 import { TextDocument } from 'vscode-languageserver-textdocument';
+import { URI } from 'vscode-uri';
 
 // Create a connection for the server, using Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
@@ -168,7 +168,7 @@ connection.onFoldingRanges((params: FoldingRangeParams) => {
 })
 
 documents.onDidOpen(e => {
-	const filePath = Files.uriToFilePath(e.document.uri)!;
+	const filePath = URI.parse(e.document.uri).fsPath;
 	if(!LuFilesStatus.luFilesOfWorkspace.includes(filePath)) {
 		LuFilesStatus.luFilesOfWorkspace.push(filePath);
 	}

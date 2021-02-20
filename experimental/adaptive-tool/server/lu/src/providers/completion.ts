@@ -12,12 +12,13 @@ import * as path from 'path';
 import * as matchingPattern from '../matchingPattern';
 
 import {
-	CompletionItem, CompletionItemKind, TextDocumentPositionParams,	Files, TextDocuments
-} from 'vscode-languageserver';
+	CompletionItem, CompletionItemKind, TextDocumentPositionParams, TextDocuments
+} from 'vscode-languageserver/node';
 
 import {
 	TextDocument
 } from 'vscode-languageserver-textdocument';
+import { URI } from 'vscode-uri';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const parseFile = require('@microsoft/bf-lu/lib/parser/lufile/parseFileContents.js').parseFile;
@@ -31,7 +32,7 @@ const parseFile = require('@microsoft/bf-lu/lib/parser/lufile/parseFileContents.
  */
 export function provideCompletionItems(_textDocumentPosition: TextDocumentPositionParams, documents: TextDocuments<TextDocument>) {
 	const document = documents.get(_textDocumentPosition.textDocument.uri)!;
-	const fspath = Files.uriToFilePath(document.uri);
+	const fspath = URI.parse(document.uri).fsPath;
 	const position = _textDocumentPosition.position;
 	const curLineContent = document?.getText({
 		start: {

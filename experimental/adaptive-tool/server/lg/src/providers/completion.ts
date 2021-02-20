@@ -5,8 +5,8 @@
  */
 
 import {
-	CompletionItem, CompletionItemKind, TextDocumentPositionParams,	Files, TextDocuments
-} from 'vscode-languageserver';
+	CompletionItem, CompletionItemKind, TextDocumentPositionParams, TextDocuments
+} from 'vscode-languageserver/node';
 
 import {
 	TextDocument, Position

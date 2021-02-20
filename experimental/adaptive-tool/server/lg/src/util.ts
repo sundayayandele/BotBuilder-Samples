@@ -5,7 +5,7 @@
  * ------------------------------------------------------------------------------------------ */
 
 import { TextDocument, Range, Position } from "vscode-languageserver-textdocument";
-import { DocumentUri, Files, WorkspaceFolder } from 'vscode-languageserver';
+import { DocumentUri, WorkspaceFolder } from 'vscode-languageserver/node';
 import { Templates, } from "botbuilder-lg";
 import { TemplatesStatus, TemplatesEntity } from "./templatesStatus";
 import { ReturnType } from "adaptive-expressions";
@@ -35,7 +35,8 @@ export function isInFencedCodeBlock(doc: TextDocument, position: Position): bool
 export function getTemplatesFromCurrentLGFile(lgFileUri: DocumentUri) : Templates {
 
     let result = new Templates();
-    const engineEntity: TemplatesEntity | undefined = TemplatesStatus.templatesMap.get(Files.uriToFilePath(lgFileUri)!);
+    const path = URI.parse(lgFileUri).fsPath;
+    const engineEntity: TemplatesEntity | undefined = TemplatesStatus.templatesMap.get(path);
     if (engineEntity !== undefined && engineEntity.templates.allTemplates.length > 0) {
         result = engineEntity.templates;
     }

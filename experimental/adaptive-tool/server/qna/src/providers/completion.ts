@@ -17,6 +17,7 @@ import {
 } from 'vscode-languageserver-textdocument';
 import { URI } from 'vscode-uri';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const parseFile = require('@microsoft/bf-lu/lib/parser/lufile/parseFileContents.js').parseFile;
 
 /**

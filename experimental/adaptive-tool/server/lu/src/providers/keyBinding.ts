@@ -6,7 +6,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import {
 	TextDocuments, ExecuteCommandParams, TextEdit, TextDocumentEdit, Connection
-} from 'vscode-languageserver';
+} from 'vscode-languageserver/node';
 
 import {
 	TextDocument, Position

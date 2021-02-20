@@ -17,7 +17,6 @@ import {
 	TextDocumentPositionParams,
 	TextDocumentSyncKind,
 	InitializeResult,
-	Files,
 	HoverParams,
 	DefinitionParams,
 	SignatureHelpParams,
@@ -26,7 +25,7 @@ import {
 	DidChangeWatchedFilesRegistrationOptions,
 	FileChangeType,
 	FoldingRangeParams,
-} from 'vscode-languageserver';
+} from 'vscode-languageserver/node';
 
 import * as completion from './providers/completion';
 import * as diagnostics from './providers/diagnostics';

@@ -5,7 +5,7 @@
 
 import {
 	Diagnostic,	DiagnosticSeverity,	Connection
-} from 'vscode-languageserver';
+} from 'vscode-languageserver/node';
 
 import { TemplatesStatus, TemplatesEntity } from '../templatesStatus';
 import * as util from '../util';

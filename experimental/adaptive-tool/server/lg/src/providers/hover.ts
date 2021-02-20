@@ -7,7 +7,7 @@
  */
 import {
 	TextDocuments, MarkedString, HoverParams
-} from 'vscode-languageserver';
+} from 'vscode-languageserver/node';
 
 import * as util from '../util';
 import * as path from 'path';

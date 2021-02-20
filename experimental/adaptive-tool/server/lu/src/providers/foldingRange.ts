@@ -3,6 +3,7 @@ import { TextDocument } from 'vscode-languageserver-textdocument';
 import * as path from 'path';
 import * as util from '../util';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const parseFile = require('@microsoft/bf-lu/lib/parser/lufile/luParser');
 
 export function foldingRange(params: FoldingRangeParams, documents: TextDocuments<TextDocument>) {

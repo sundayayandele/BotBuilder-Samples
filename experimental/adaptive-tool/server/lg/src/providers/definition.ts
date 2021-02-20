@@ -4,7 +4,7 @@
  */
 import {
 	TextDocuments, Location, DefinitionParams
-} from 'vscode-languageserver';
+} from 'vscode-languageserver/node';
 
 import { TemplatesStatus } from '../templatesStatus';
 import * as util from '../util';

@@ -4,7 +4,7 @@
  */
 
 import { Templates } from 'botbuilder-lg';
-import { DocumentUri } from 'vscode-languageserver';
+import { DocumentUri } from 'vscode-languageserver/node';
 
 export class TemplatesStatus {
     public static templatesMap: Map<string, TemplatesEntity> = new Map<string, TemplatesEntity>();
