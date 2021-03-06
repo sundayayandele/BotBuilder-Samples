@@ -1,0 +1,5 @@
+{
+  "$kind": "Microsoft.OrchestratorRecognizer",
+  "modelFolder": "=settings.orchestrator.models.en",
+  "snapshotFile": "=settings.orchestrator.snapshots.emptyBot_en_us"
+}

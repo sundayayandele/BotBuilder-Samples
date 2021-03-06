@@ -1,0 +1,282 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "qeVTFa",
+    "name": "Support",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "qqNCNm"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "DRnHFk"
+          },
+          "disabled": false,
+          "maxTurnCount": 30,
+          "alwaysPrompt": true,
+          "allowInterruptions": true,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "prompt": "${TextInput_Prompt_DRnHFk()}",
+          "property": "dialog.question"
+        },
+        {
+          "$kind": "Microsoft.RepeatDialog",
+          "$designer": {
+            "id": "z5gwN0"
+          },
+          "activityProcessed": true
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnUnknownIntent",
+      "$designer": {
+        "id": "8UypJP"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "frjPt0"
+          },
+          "activity": "${SendActivity_frjPt0()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "e3N3E3",
+        "name": "none"
+      },
+      "intent": "none",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "KZlbEO"
+          },
+          "activity": "${SendActivity_KZlbEO()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "CDyPCW",
+        "name": "exit"
+      },
+      "intent": "exit",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "rx7Z2m"
+          },
+          "activity": "${SendActivity_rx7Z2m()}"
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "5HutgJ"
+          }
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "v633Hr",
+        "name": "account"
+      },
+      "intent": "account",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "9oYjSh"
+          },
+          "activity": "${SendActivity_9oYjSh()}"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "b0WOTh"
+          },
+          "property": "dialog.intent",
+          "value": "Account Management"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "5sFcjx"
+          },
+          "activity": "${SendActivity_5sFcjx()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "mdPMmf"
+          },
+          "activity": "${SendActivity_mdPMmf()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "c3zTh4",
+        "name": "knowledgebase"
+      },
+      "intent": "knowledgebase",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "0cg5EP"
+          },
+          "activity": "${SendActivity_0cg5EP()}"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "jz8isd"
+          },
+          "property": "dialog.intent",
+          "value": "Product Knowledgebase"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "31ODOh"
+          },
+          "activity": "${SendActivity_31ODOh()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "nG2Ijw"
+          },
+          "activity": "${SendActivity_nG2Ijw()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "hfARYb",
+        "name": "contact"
+      },
+      "intent": "contact",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "xnUhSg"
+          },
+          "activity": "${SendActivity_xnUhSg()}"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "fnyEti"
+          },
+          "property": "dialog.intent",
+          "value": "Contact Support"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "xwacK7"
+          },
+          "activity": "${SendActivity_xwacK7()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "gKN2Ss"
+          },
+          "activity": "${SendActivity_gKN2Ss()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "cVaDkT",
+        "name": "orders"
+      },
+      "intent": "orders",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "pYQHbs"
+          },
+          "activity": "${SendActivity_pYQHbs()}"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "f2ZtWL"
+          },
+          "property": "dialog.intent",
+          "value": "Orders Management"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "nhivn2"
+          },
+          "activity": "${SendActivity_nhivn2()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "shVHZ6"
+          },
+          "activity": "${SendActivity_shVHZ6()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "wknTsW",
+        "name": "none"
+      },
+      "intent": "none",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "CRAlYg"
+          },
+          "activity": "${SendActivity_CRAlYg()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "URZakK"
+          },
+          "activity": "${SendActivity_URZakK()}"
+        }
+      ]
+    }
+  ],
+  "generator": "Support.lg",
+  "recognizer": "Support.lu.qna",
+  "id": "Support"
+}

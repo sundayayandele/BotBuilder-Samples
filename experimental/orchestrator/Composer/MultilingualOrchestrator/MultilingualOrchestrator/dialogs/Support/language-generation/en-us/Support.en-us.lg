@@ -1,0 +1,86 @@
+[import](common.lg)
+
+
+# HelpPrompt()
+- How can I help you?
+- What can I do for you?
+# TextInput_Prompt_DRnHFk()
+[Activity
+    Text = ${HelpPrompt()}
+]
+# ResultsCard()
+[HeroCard
+  title = ${dialog.intent}
+  text = * Utterance: **${turn.recognized.text}**\r* Intent: **${turn.recognized.intent}**\r* Score: **${round(turn.recognized.score, 3)}**
+]
+
+# AssumeHandling()
+- Let's assume that I answered your issue in this section :)
+- So let's say I handled your topic...
+
+# SendActivity_frjPt0()
+- I didn't understand. Please rephrase.
+
+# SendActivity_KZlbEO()
+- Unknown intent. Please rephrase.
+# SendActivity_rx7Z2m()
+[Activity
+    Text = ${SendActivity_rx7Z2m_text()}
+]
+
+# SendActivity_rx7Z2m_text()
+- Goodbye
+- I hope you're satisfied. Enjoy the rest of your day.\n\nGoodbye
+# SendActivity_31ODOh()
+- ${ResultsCard()}
+# SendActivity_shVHZ6()
+[Activity
+    Text = ${AssumeHandling()}
+]
+
+# SendActivity_gKN2Ss()
+[Activity
+    Text = ${AssumeHandling()}
+]
+
+# SendActivity_nG2Ijw()
+[Activity
+    Text = ${AssumeHandling()}
+]
+
+# SendActivity_mdPMmf()
+[Activity
+    Text = ${AssumeHandling()}
+]
+
+# SendActivity_9oYjSh()
+[Activity
+    Text = (fake redirect to expert skill for further handling... )
+]
+
+# SendActivity_0cg5EP()
+[Activity
+    Text = (fake redirect to skill...)
+]
+
+# SendActivity_xnUhSg()
+[Activity
+    Text = (fake redirect to expert skill for further handling… )
+]
+
+# SendActivity_pYQHbs()
+[Activity
+    Text = (fake redirect to expert skill for further handling… )
+]
+
+
+# SendActivity_CRAlYg()
+- ${ResultsCard()}
+# SendActivity_URZakK()
+- Please rephrase.
+# SendActivity_xwacK7()
+- ${ResultsCard()}
+# SendActivity_nhivn2()
+- ${ResultsCard()}
+# SendActivity_5sFcjx()
+- ${ResultsCard()}

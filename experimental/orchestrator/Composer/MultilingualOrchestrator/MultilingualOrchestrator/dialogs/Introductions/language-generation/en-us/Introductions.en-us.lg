@@ -1,0 +1,34 @@
+[import](common.lg)
+
+# TextInput_Prompt_qBmkTc()
+[Activity
+    Text = What's your name?
+]
+
+# SendActivity_lx5OCQ()
+[Activity
+    Text = Nice to meet you ${conversation.name}! I am Bot.
+]
+
+# ChoiceInput_Prompt_UWr6mw()
+[Activity
+    Text = What is your primary language?
+]
+
+# SendActivity_Pdopk7()
+[Activity
+    Text = I was trained on some 100 languages, and I may be able to answer in other languages, but these are my 'official' languages (you can try your language later).
+]
+
+# SendActivity_Jh7NWF()
+[Activity
+    Text = ${SendActivity_Jh7NWF_text()}
+]
+
+# SendActivity_Jh7NWF_text()
+- Great! We will understand each other well.
+- Communications is key. And we speak the same language. What can go wrong? :)
+
+# SendActivity_uFxR68()
+- Let's assume that I represent customer support. Ask me something in the following areas:\n\n* Account Management\n\n* Tracking Orders\n\n* Help with our "headphones or speakers products"\n\n* Type 'done' or 'goodbye' when done.
+

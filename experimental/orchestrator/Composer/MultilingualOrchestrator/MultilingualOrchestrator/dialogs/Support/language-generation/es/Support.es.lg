@@ -1,0 +1,85 @@
+[import](common.lg)
+
+
+# HelpPrompt()
+- ¿Como puedo ayudarte?
+- ¿Qué puedo hacer por ti? 
+# TextInput_Prompt_DRnHFk()
+[Activity
+    Text = ${HelpPrompt()}
+]
+# ResultsCard()
+[HeroCard
+  title = ${dialog.intent}
+  text = * Declaración: **${turn.recognized.text}**\r* Intención: **${turn.recognized.intent}**\r* Puntaje: **${round(turn.recognized.score, 3)}**
+]
+
+# AssumeHandling()
+- Supongamos que respondí su problema en esta sección. :)
+- Entonces digamos que manejé tu tema...
+
+# SendActivity_frjPt0()
+- No entendí. Por favor, reformule.
+
+# SendActivity_KZlbEO()
+- Intención desconocida. Por favor, reformule.
+# SendActivity_rx7Z2m()
+[Activity
+    Text = ${SendActivity_rx7Z2m_text()}
+]
+
+# SendActivity_rx7Z2m_text()
+- Adiós
+- Espero que estés satisfecho. Disfruta el resto de tu dia.\n\Adiós
+# SendActivity_31ODOh()
+- ${ResultsCard()}
+# SendActivity_shVHZ6()
+[Activity
+    Text = ${AssumeHandling()}
+]
+
+# SendActivity_gKN2Ss()
+[Activity
+    Text = ${AssumeHandling()}
+]
+
+# SendActivity_nG2Ijw()
+[Activity
+    Text = ${AssumeHandling()}
+]
+
+# SendActivity_mdPMmf()
+[Activity
+    Text = ${AssumeHandling()}
+]
+
+# SendActivity_9oYjSh()
+[Activity
+    Text = (redireccionamiento falso a la habilidad de un experto para su posterior manejo ...)
+]
+
+# SendActivity_0cg5EP()
+[Activity
+    Text = (redirección falsa a la habilidad ...)
+]
+
+# SendActivity_xnUhSg()
+[Activity
+    Text = (redireccionamiento falso a la habilidad de un experto para su posterior manejo…)
+]
+
+# SendActivity_pYQHbs()
+[Activity
+    Text = (redireccionamiento falso a la habilidad de un experto para su posterior manejo…)
+]
+
+# SendActivity_CRAlYg()
+- ${ResultsCard()}
+# SendActivity_URZakK()
+- Por favor, reformule.
+# SendActivity_xwacK7()
+- ${ResultsCard()}
+# SendActivity_nhivn2()
+- ${ResultsCard()}
+# SendActivity_5sFcjx()
+- ${ResultsCard()}

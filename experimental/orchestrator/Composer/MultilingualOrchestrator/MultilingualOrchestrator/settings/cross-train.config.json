@@ -1,0 +1,35 @@
+{
+  "Support.en-us": {
+    "rootDialog": false,
+    "triggers": {
+      "none": [],
+      "exit": [],
+      "account": [],
+      "knowledgebase": [],
+      "contact": [],
+      "orders": []
+    }
+  },
+  "Support.fr-fr": {
+    "rootDialog": false,
+    "triggers": {
+      "none": [],
+      "exit": [],
+      "account": [],
+      "knowledgebase": [],
+      "contact": [],
+      "orders": []
+    }
+  },
+  "Support.es-mx": {
+    "rootDialog": false,
+    "triggers": {
+      "none": [],
+      "exit": [],
+      "account": [],
+      "knowledgebase": [],
+      "contact": [],
+      "orders": []
+    }
+  }
+}

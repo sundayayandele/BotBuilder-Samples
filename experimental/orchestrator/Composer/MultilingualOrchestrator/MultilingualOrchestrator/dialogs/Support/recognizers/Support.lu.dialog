@@ -1,0 +1,12 @@
+{
+  "$kind": "Microsoft.MultiLanguageRecognizer",
+  "id": "LUIS_Support",
+  "recognizers": {
+    "en-us": "Support.en-us.lu",
+    "": "Support.en-us.lu",
+    "es": "Support.es.lu",
+    "fr": "Support.fr.lu",
+    "fr-fr": "Support.fr-fr.lu",
+    "es-mx": "Support.es-mx.lu"
+  }
+}

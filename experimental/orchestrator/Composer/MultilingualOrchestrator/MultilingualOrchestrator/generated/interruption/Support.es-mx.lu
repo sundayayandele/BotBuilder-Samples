@@ -1,0 +1,124 @@
+
+> LUIS application information
+> !# @app.versionId = 0.1
+> !# @app.culture = en-us
+> !# @app.luis_schema_version = 3.2.0
+
+
+> # Intent definitions
+
+# account
+- administración de cuentas
+- ver mi cuenta
+- Actualizar mi perfil
+- acceso
+- saldo de la cuenta
+- restablecer mi contraseña
+- reembolso
+- Información de facturación
+
+
+# orders
+- rastrear mi pedido
+- Historial de pedidos
+- actualizar mi pedido
+- no puedo encontrar mi pedido
+- estado de la orden
+- devolución de producto
+- historial de compras
+- cargar mi tarjeta de crédito
+- actualización de la orden
+- el número de rastreo
+
+
+# knowledgebase
+- ayuda con mis altavoces o auriculares
+- información de la base de conocimientos
+- manuales
+- instrucciones
+- ¿Cómo reinicio mis altavoces o auriculares?
+- ayuda de operación
+- operación de botones
+- esto no funciona
+- ningún poder
+- cargando
+- cancelación activa de ruido
+- advertencias
+- cómo usar mis auriculares
+- donde colocar mis altavoces
+- los sonidos son demasiado débiles
+- mal sonido
+- información de vatios
+- conectar a mi estéreo
+- certificaciones de estándares
+- número de serie
+- número de modelo
+- qué hay en la caja
+- información de piezas
+- reproducir, pausar, saltar, volumen, silenciar
+- responder / finalizar / rechazar llamada
+- personalizar atajos
+- asistente de voz
+- configurar mi dispositivo
+- favoritos
+- batería
+- conexiones bluetooth
+- luz de la batería
+- cable de audio
+- cómo configurar mi ecualizador
+- cuidado y mantenimiento
+- almacenamiento y limpieza
+- garantía limitada
+- solución de problemas
+- reiniciar
+- registrar mis altavoces o auriculares
+- reparación o reemplazo
+- ubicaciones de tiendas físicas o en línea
+- beneficios
+- comunidad
+- localizar o encontrar mi producto
+- sobre nosotros
+- volumen, decibeles
+
+
+# contact
+- soporte de contacto
+- número de teléfono
+- correo electrónico o formulario de contacto
+- representante del cliente
+- horas de funcionamiento
+- charlar con el agente
+- envíenos un mensaje
+- ¿cuándo estás abierto?
+- agente vivo
+
+
+# exit
+- hecho
+- adiós
+- Salida
+
+
+# none
+- Fechado en un notable hace muchos años, la pintura es de un Sulawesi
+- Son un altavoz que pones en tu casa y puedes pedirle que busque cosas en Internet.
+- corre en la otra dirección
+- expresa sus quejas con una sonrisa y un aire de cortesía
+- mariscal de campo amargado y desencantado
+- capturar la ejecución o puesta en escena de estas capacidades
+
+
+> # Entity definitions
+
+
+> # PREBUILT Entity definitions
+
+
+> # Phrase list definitions
+
+
+> # List entities
+
+> # RegEx entities
+
+
