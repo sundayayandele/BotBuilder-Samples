@@ -47,9 +47,9 @@
         "newAppServicePlanSku": {
             "type": "object",
             "defaultValue": {
-                "name": "S2",
+                "name": "S3",
                 "tier": "Standard",
-                "size": "S2",
+                "size": "S3",
                 "family": "S",
                 "capacity": 1
             },
